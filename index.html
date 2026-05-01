@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, rgba(31, 47, 73, 0.7) 0%, rgba(31, 47, 73, 0.4) 100%);
+            color: #1f2f49;
+            padding-top: 140px;
+            overflow-x: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+
+
+
+        header {
+            width: 100%;
+            height: 120px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            border-bottom: 1px solid #d9e3f2;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+
+        }
+
+        .A {
+            width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 10%;
+            background-color: #1f2f49;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .slogan {
+            width: 350px;
+            height: 60px;
+            margin-right: 350px;
+            padding: 5px;
+            line-height: 0.8;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+
+        .navigation {
+            width: 430px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+
+
+        }
+
+
+        ul {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .ref {
+
+            text-decoration: none;
+            font-size: 16px;
+            color: #1f2f49;
+        }
+
+
+
+        .accueil {
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            box-shadow: 0 14px 30px rgba(24, 48, 87, 0.08);
+            border: 1px solid #dde7f5;
+            border-radius: 28px;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f9ff 100%);
+            overflow: hidden;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .apropos {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 100px;
+        }
+
+        .card {
+            background-color: white;
+            box-shadow: 0 14px 30px rgba(24, 48, 87, 0.08);
+            height: 200px;
+            border-radius: 20px;
+            padding: 20px;
+            line-height: 1.7;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .centre {
+            grid-column: span 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cardp {
+            background-color: white;
+            box-shadow: 0 14px 30px rgba(24, 48, 87, 0.08);
+            width: 250px;
+            height: 60px;
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+        }
+
+        .projet {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+            margin-top: 100px;
+        }
+
+        .card2 {
+            background-color: white;
+            box-shadow: 0 14px 30px rgba(24, 48, 87, 0.08);
+            height: 450px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            line-height: 1.8;
+        }
+
+
+
+        .centre2 {
+            grid-column: span 3;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cardp2 {
+            background-color: white;
+            box-shadow: 0 14px 30px rgba(24, 48, 87, 0.08);
+            width: 250px;
+            height: 60px;
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+        }
+
+        .img {
+            width: 100%;
+            height: 240px;
+            border-radius: 20px 20px 0px 0px;
+            background-image: url('image/dev.jpeg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .img2 {
+            width: 100%;
+            height: 240px;
+            border-radius: 20px 20px 0px 0px;
+            background-image: url('image/code.jpeg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .img3 {
+            width: 100%;
+            height: 240px;
+            border-radius: 20px 20px 0px 0px;
+            background-image: url('image/logo.jpeg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .img4 {
+            width: 100%;
+            height: 240px;
+            border-radius: 20px 20px 0px 0px;
+            background-image: url('image/info.jpeg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .img5 {
+            width: 100%;
+            height: 240px;
+            border-radius: 20px 20px 0px 0px;
+            background-image: url('image/deve.jpeg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .img6 {
+            width: 100%;
+            height: 240px;
+            border-radius: 20px 20px 0px 0px;
+            background-image: url('image/web.jpeg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .profil {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 100px;
+        }
+
+        .card3 {
+            background-color: white;
+            box-shadow: 0 14px 30px rgba(24, 48, 87, 0.08);
+            height: 150px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .centre3 {
+            grid-column: span 4;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cardp3 {
+            background-color: white;
+            box-shadow: 0 14px 30px rgba(24, 48, 87, 0.08);
+            width: 250px;
+            height: 60px;
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+        }
+
+        .contact {
+            width: 100%;
+            height: 300px;
+            background-color: #1f2f49;
+            border-radius: 28px;
+            margin-top: 80px;
+        }
+
+        .contact {
+            width: 100%;
+            background-color: white;
+            border-radius: 28px;
+            margin-top: 80px;
+            margin-bottom: 30px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #1f2f49;
+        }
+
+        .badge {
+            background: #fff;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-primary {
+            background: #1f2f49;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-primary:hover{
+             background-color: #4e91c5;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(41, 86, 138, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid #ddd;
+            color: #1f2f49;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+        }
+         .btn-secondary:hover{
+             background-color: #4e91c5;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(41, 86, 138, 0.4);
+        }
+
+        .btn-primary2 {
+            background: #789ad1;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+          .btn-secondary2:hover{
+             background-color: #4e91c5;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(41, 86, 138, 0.4);
+        }
+          .btn-primary2:hover{
+             background-color: #4e91c5;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(41, 86, 138, 0.4);
+        }
+
+        .btn-secondary2 {
+            background: transparent;
+            border: 1px solid #ddd;
+            color: #e2e4e7;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+        }
+
+        .bad {
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+            height: 90px;
+            padding: 20px;
+
+        }
+
+        .contain {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 40px;
+
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .image-container {
+            position: relative;
+            width: 350px;
+            height: 450px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+            box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .floating-card {
+            position: absolute;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .top-right {
+            top: 30px;
+            right: -20px;
+        }
+
+        .bottom-left {
+            bottom: 40px;
+            left: -30px;
+        }
+
+        .contact {
+            width: 100%;
+            height: 300px;
+            background-color: #1f2f49;
+            color: white;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            line-height: 1.8;
+            gap: 20px;
+
+        }
+
+        .paragraph {
+            padding: 15px;
+        }
+
+        .copyright {
+            width: 100%;
+            height: 70px;
+            background-color: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+
+        }
+
+        /* =============================================
+           RESPONSIVE — iPhone 14 Pro Max (430px)
+        ============================================= */
+        @media (max-width: 480px) {
+
+            body {
+                padding-top: 80px;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            /* --- HEADER --- */
+            header {
+                height: 70px;
+                padding: 0 16px;
+            
+            }
+
+            .A {
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                width: 42px;
+                height: 42px;
+                font-size: 13px;
+                flex-shrink: 0;
+            }
+
+            /* On cache le slogan pour gagner de la place */
+            .slogan {
+                display: none;
+            }
+
+            /* Navigation horizontale scrollable */
+            .navigation {
+                width: auto;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+              
+            }
+
+            .navigation::-webkit-scrollbar {
+                display: none;
+            }
+
+            ul {
+                gap: 18px;
+                flex-wrap: nowrap;
+                width: max-content;
+            }
+
+            .ref {
+                font-size: 12px;
+                white-space: nowrap;
+             
+            }
+
+            /* --- HERO / ACCUEIL --- */
+            .accueil {
+                flex-direction: column;
+                height: auto;
+                padding: 28px 16px;
+                gap: 30px;
+                border-radius: 20px;
+            }
+
+            .hero-text h1 {
+                font-size: 30px;
+            }
+
+            .hero-text p {
+                font-size: 15px;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                text-align: center;
+                padding: 13px 20px;
+            }
+
+            .contain {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 10px;
+                margin-top: 24px;
+            }
+
+            .bad {
+                height: auto;
+                padding: 12px 8px;
+                border-radius: 14px;
+            }
+
+            .bad h2 {
+                font-size: 18px;
+            }
+
+            .bad p {
+                font-size: 11px;
+            }
+
+            /* Photo profil réduite */
+            .hero-image {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .image-container {
+                width: 220px;
+                height: 280px;
+            }
+
+            .floating-card {
+                padding: 8px 14px;
+                font-size: 12px;
+            }
+
+            .top-right {
+                right: -10px;
+            }
+
+            .bottom-left {
+                left: -10px;
+            }
+
+            /* --- À PROPOS --- */
+            .apropos {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                margin-top: 60px;
+            }
+
+            .centre {
+                grid-column: span 1;
+            }
+
+            .card {
+                height: auto;
+                min-height: 140px;
+            }
+
+            /* --- PROJETS --- */
+            .projet {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin-top: 60px;
+            }
+
+            .centre2 {
+                grid-column: span 1;
+            }
+
+            .card2 {
+                height: auto;
+            }
+
+            .img, .img2, .img3, .img4, .img5, .img6 {
+                height: 180px;
+            }
+
+            /* --- PROFIL --- */
+            .profil {
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+                margin-top: 60px;
+            }
+
+            .centre3 {
+                grid-column: span 2;
+            }
+
+            .card3 {
+                height: 100px;
+                font-size: 12px;
+                padding: 10px;
+            }
+
+            /* --- CONTACT --- */
+            .contact {
+                height: auto;
+                padding: 40px 20px;
+                border-radius: 20px;
+                margin-top: 60px;
+            }
+
+            .contact h1 {
+                font-size: 28px;
+            }
+
+            .contact p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .hero-btns .btn-primary2,
+            .hero-btns .btn-secondary2 {
+                text-align: center;
+                padding: 13px 20px;
+            }
+
+            /* --- COPYRIGHT --- */
+            .copyright {
+                border-radius: 18px;
+                padding: 0 16px;
+                text-align: center;
+            }
+
+            .copyright h3 {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- L'entete du page -->
+    <header>
+        <div class="A">
+            <div class="logo">
+                <h2>YS</h2>
+            </div>
+            <div class="slogan">
+                <h2>Yaya Sall</h2><br>
+                <p>Portfolio étudiant / personnel </p>
+            </div>
+            <div>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#Acceuil" class="ref">Accueil</a></li>
+                        <li><a href="#A propos" class="ref">A propos</a></li>
+                        <li><a href="#Mes projets" class="ref">Mes projets</a></li>
+                        <li><a href="#Mon profil" class="ref">Mon profil</a></li>
+                        <li><a href="#Contact" class="ref">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="accueil" id="Acceuil">
+        <div class="hero-text">
+            <span class="badge">✨ Étudiant ambitieux & futur expert numérique</span>
+            <h1>Construire <br>mon parcours <br>avec <span>passion</span>,<br> créativité et <br>ambition</h1>
+            <p>Bonjour, je suis Yaya Sall, étudiant passionné par le numérique <br>et le développement. Je crée des
+                expériences <br>digitales fluides et modernes.</p>
+            <div class="hero-btns">
+                <a href="#Mes projets" class="btn-primary">Voir mes projets</a>
+                <a href="#Contact" class="btn-secondary">Me contacter</a>
+            </div>
+            <div class="contain">
+                <div class="bad">
+                    <h2>5+</h2>
+                    <p>Projet actuelle</p>
+                </div>
+                <div class="bad">
+                    <h2>5+</h2>
+                    <p>Projet actuelle</p>
+                </div>
+                <div class="bad">
+                    <h2>5+</h2>
+                    <p>Projet actuelle</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-container">
+                <img src="image/moi3.jpeg" alt="Yaya Sall">
+                <div class="floating-card top-right">Créativité</div>
+                <div class="floating-card bottom-left">Apprentissage</div>
+            </div>
+        </div>
+    </div>
+    <div class="apropos" id="A propos">
+        <div class="centre">
+            <div class="cardp">
+                <h2>A propos de moi</h2>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Mon parcours</h2>
+            <p>Étudiant déterminé, j'ai choisi de m'orienter vers le numérique pour sa capacité à transformer les
+                entreprises. Mon parcours est guidé par l'envie d'apprendre et de maîtriser les outils qui feront le
+                monde de demain.</p>
+        </div>
+        <div class="card">
+            <h2>Mes objectifs</h2>
+            <p>Mon but est de devenir un pilier dans la gestion de projets numériques. Je souhaite allier mes
+                connaissances théoriques à des expériences pratiques pour bâtir des solutions concrètes et innovantes.
+            </p>
+        </div>
+        <div class="card">
+            <h2>Mes qualités</h2>
+            <p>La ponctualité, la discrétion et le sens du détail sont au cœur de ma méthode de travail. Je suis
+                convaincu que la qualité d'un service passe par une organisation sans faille et une écoute active.</p>
+        </div>
+        <div class="card">
+            <h2>Ce que je recherche</h2>
+            <p>Je suis à la recherche de stages ou de collaborations en alternance qui me permettront de mettre mon
+                énergie au service de projets stimulants, tout en continuant à monter en compétence.</p>
+        </div>
+    </div>
+    <div class="projet" id="Mes projets">
+        <div class="centre2">
+            <div class="cardp2">
+                <h2>Mes projets</h2>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="img"></div>
+            <div class="paragraph">
+                <h2>Plateforme Web E.G.M</h2>
+                <p>Conception d'un site moderne pour une entreprise de gardiennage et ménage. Focus sur l'expérience
+                    utilisateur (UX) et le design professionnel.</p>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="img6">
+            </div>
+            <div class="paragraph">
+                <h2>Dashboard Administrateur</h2>
+                <p>Création d'une interface claire pour la gestion des plannings et des interventions des agents de
+                    sécurité.</p>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="img2"></div>
+            <div class="paragraph">
+                <h2>Calculateur de Devis Dynamique</h2>
+                <p>Développement d'un outil permettant aux clients de calculer le coût de leurs prestations en temps
+                    réel
+                    selon la surface et le service choisi.</p>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="img3"></div>
+            <div class="paragraph">
+                <h2>Branding & Logo Design</h2>
+                <p>Création de l'identité graphique complète (couleurs, typographies, logo) pour renforcer l'image de
+                    marque
+                    d'une structure professionnelle.</p>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="img4"></div>
+            <div class="paragraph">
+                <h2>Portfolio Étudiant 2026</h2>
+                <p>Développement d'un CV numérique interactif utilisant les dernières technologies Web (HTML5, CSS3,
+                    Grid
+                    Layout).</p>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="img5"></div>
+            <div class="paragraph">
+                <h2>Étude sur la Sécurité Numérique</h2>
+                <p>Analyse des protocoles de sécurité pour la protection des données clients dans le secteur des
+                    services à
+                    la personne.</p>
+            </div>
+        </div>
+    </div>
+    <div class="profil" id="Mon profil">
+        <div class="centre3">
+            <div class="cardp3">
+                <h2>Mon profil</h2>
+            </div>
+        </div>
+        <div class="card3">
+            <h2>2026</h2>
+            <p>Année de spécialisation et de défis.</p>
+        </div>
+        <div class="card3">
+            <h2>5+</h2>
+            <p>Projets académiques et personnels réalisés.</p>
+        </div>
+        <div class="card3">
+            <h2>100%</h2>
+            <p>Engagement pour la réussite de mes missions.</p>
+        </div>
+        <div class="card3">
+            <h2>Management</h2>
+            <p>Mon domaine de prédilection.</p>
+        </div>
+    </div>
+    <div class="contact" id="Contact">
+        <h1>Contact</h1>
+        <p>Je suis actuellement ouvert à de nouvelles opportunités. Que ce soit pour un projet sérieux ou une simple
+            <br>discussion professionnelle, n'hésitez pas à me contacter
+        </p>
+        <div class="hero-btns">
+            <a href="mailto:ysall8102@gmail.com?subject=Contact depuis votre Portfolio" class="btn-primary2">Envoyer un
+                email</a> <a href="" class="btn-secondary2">Télécharger mon CV</a>
+        </div>
+    </div>
+    <div class="copyright">
+        <h3>©️ 2026 Yaya Sall portfolio étudiant / personnel</h3>
+    </div>
+</body>
+
+</html>
